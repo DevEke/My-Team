@@ -1,0 +1,134 @@
+// ===============
+// COLORS
+// ===============
+
+$midnight-green: #014E56;
+$light-coral: #F67E7E;
+$rapture-blue: #79C8C7;
+$police-blue: #2C6269;
+$deep-jungle-green: #004047;
+$sacramento-state-green: #012F34;
+$dark-green: #002529;
+
+// ===============
+// FONTS
+// ===============
+
+$font: 'Livvic', sans-serif;
+
+* {
+    font-family: $font;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+}
+p {
+    font-weight: 600;
+}
+
+@mixin h1-large {
+    font-size: 100px;
+}
+
+@mixin h1-small {
+    font-size: 64px;
+}
+
+@mixin body-large {
+    font-size: 18px;
+}
+
+@mixin body-small {
+    font-size: 15px;
+}
+
+// ===============
+// BUTTONS
+// ===============
+
+@mixin buttons {
+    box-sizing: border-box;
+    font-family: $font;
+    @include body-large();
+    padding: 15px 35px;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: background .3s, color .3s;
+}
+
+@mixin primary-button-dark {
+    @include buttons();
+    border: 2px solid white;
+    color: white;
+    background: transparent;
+    &:hover {
+        background: white;
+        color: $midnight-green;
+    }
+    &:disabled {
+        opacity: .25;
+    }
+}
+
+@mixin primary-button-light {
+    @include buttons();
+    border: 2px solid $midnight-green;
+    color: $midnight-green;
+    background: transparent;
+    &:hover {
+        background: $midnight-green;
+        color: white;
+    }
+    &:disabled {
+        opacity: .25;
+    }
+}
+
+@mixin secondary-button {
+    @include buttons();
+    background: white;
+    color: $midnight-green;
+    &:hover {
+        background: $rapture-blue;
+    }
+    &:disabled {
+        opacity: .25;
+    }
+}
+
+// ===============
+// FORM ELEMENTS
+// ===============
+
+@mixin text-area {
+    border: none;
+    border-bottom: 1px solid white;
+    padding: 5px 16px;
+    &:active {
+        border-bottom: 1px solid $rapture-blue;
+    }
+}
+
+@mixin text-input {
+    border: none;
+    border-bottom: 1px solid white;
+    padding: 16px;
+    &:hover {
+        border-bottom: 1px solid $rapture-blue;
+    }
+}
+
+// ===============
+// GLOBAL
+// ===============
+
+body {
+    background: $deep-jungle-green;
+}
+
+@mixin flex-spread {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

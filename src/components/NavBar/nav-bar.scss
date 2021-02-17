@@ -1,0 +1,22 @@
+@import '../../library.scss';
+
+.nav-bar__container {
+    padding: 80px 165px;
+    @include flex-spread();
+
+    .nav-bar__links {
+        @include flex-spread();
+
+        .nav-bar__logo {
+            margin-right: 80px;
+        }
+        .nav-bar__link {
+            margin-right: 40px;
+            color: white;
+            font-weight: 600;
+        }
+    }
+    .nav-bar__contact-button {
+        @include primary-button-dark();
+    }
+}
