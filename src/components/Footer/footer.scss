@@ -1,0 +1,44 @@
+@import '../../library.scss';
+
+.footer__container {
+    background: $dark-green;
+    padding: 40px 165px;
+    @include flex-spread();
+    
+    .footer__links-logo {
+        .footer__links {
+            margin-top: 30px;
+
+            .footer__link {
+                margin-right: 40px;
+                @include links();
+
+                &:visited {
+                    color: $rapture-blue;
+                }
+            }
+        }
+    }
+
+    .footer__address {
+        padding-right: 200px;
+        @include body-small();
+        color: white;
+        opacity: .6;
+        font-weight: 300;
+    }
+
+    .footer__copyright-social {
+        text-align: right;
+        .footer__social-icon {
+            margin-left: 20px;
+        }
+        .footer__copyright {
+            @include body-small();
+            color: white;
+            opacity: .6;
+            font-weight: 300;
+            margin-top: 30px;
+        }
+    }
+}

@@ -1,0 +1,132 @@
+@import '../../library.scss';
+
+.about-page__introduction {
+    padding: 40px 165px 120px;
+    @include grid-3();
+    background-image: url('../../img/bg-pattern-about-1-mobile-nav-1.svg');
+    background-repeat: no-repeat;
+    background-position: 108% 100%;
+
+    .introduction__title {
+        @include h1-small();
+        color: white;
+        grid-area: 1/1/2/2;
+    }
+
+    .introduction__text {
+        grid-area: 1/2/2/4;
+        color: white;
+        @include body-large();
+    }
+}
+
+.about-page__directors {
+    padding: 120px 165px;
+    background: $deep-jungle-green;
+    text-align: center;
+    background-image: url('../../img/bg-pattern-about-2-contact-1.svg'), url('../../img/bg-pattern-home-4-about-3.svg');
+    background-repeat: no-repeat, no-repeat;
+    background-position: -100px 0%, 100% 100%;
+
+    .directors__title {
+        @include h2();
+        color: white;
+    }
+    .directors__grid {
+        @include grid-2-3();
+        margin: 50px 0;
+
+        .directors__grid-item {
+            padding: 30px 0 50px;
+            background: $sacramento-state-green;
+            position: relative;
+
+            .directors__avatar {
+                height: 90px;
+                width: 90px;
+                border-radius: 50%;
+                border: 2px solid $rapture-blue;
+            }
+
+            .directors__name {
+                @include body-large();
+                color: $rapture-blue;
+                margin-top: 15px;
+            }
+            .directors__position {
+                @include body-small();
+                font-weight: 300;
+                font-style: italic;
+                color: white;
+            }
+
+            .directors__switch {
+                position: absolute;
+                height: 56px;
+                width: 56px;
+                background-color: $light-coral;
+                border: none;
+                border-radius: 50%;
+                cursor: pointer;
+                left: 0; 
+                right: 0; 
+                margin-left: auto; 
+                margin-right: auto;
+                bottom: -25px;
+                background-image: url('../../img/icon-cross.svg');
+                background-position: center;
+                background-repeat: no-repeat;
+                transition: background-color .3s;
+                &:hover {
+                    background-color: $rapture-blue;
+                }
+            }
+
+        }
+    }
+}
+
+.about-page__clients {
+    background: $sacramento-state-green;
+    padding: 150px 165px;
+    text-align: center;
+    background-image: url('../../img/bg-pattern-about-4.svg');
+    background-repeat: no-repeat;
+    background-position: 0% 0%;
+
+    .clients__title {
+        @include h2();
+        color: white;
+    }
+    .clients__logos {
+        margin-top: 60px;
+        @include flex-spread();
+
+        .clients__logo {
+            height: 25px;
+            width: auto;
+            &:last-of-type {
+                height: 40px;
+            }
+        }
+    }
+}
+
+
+.about-page__contact-us {
+    padding: 80px 275px;
+    background: $light-coral;
+    @include flex-spread();
+    background-image: url('../../img/bg-pattern-home-6-about-5.svg');
+    background-repeat: no-repeat;
+    background-position: 0% 100%;
+
+    .contact__title {
+        @include h2();
+        color: $sacramento-state-green;
+    }
+
+    .contact__button {
+        @include primary-button-light();
+    }
+}

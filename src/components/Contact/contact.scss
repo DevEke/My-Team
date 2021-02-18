@@ -1,0 +1,53 @@
+@import '../../library.scss';
+
+.contact-page__container {
+    padding: 30px 165px 70px;
+    @include grid-50();
+    background-image: url('../../img/bg-pattern-about-2-contact-1.svg'), url('../../img/bg-pattern-contact-2.svg');
+    background-repeat: no-repeat, no-repeat;
+    background-position: -100px 5%, 108% 100%;
+
+    .contact-page__details {
+        .contact-page__title {
+            @include h1-small();
+            color: white;
+        }
+        .contact-page__sub-title {
+            font-size: 32px;
+            color: $light-coral;
+            margin: 30px 0;
+        }
+        
+        .contact-page__data {
+            display: flex;
+            margin: 15px 0;
+            align-items: center;
+
+            .contact-page__image {
+                margin-right: 25px;
+            }
+            .contact-page__text {
+                @include body-large();
+                color: white;
+            }
+        }
+        
+
+    }
+
+    .contact-page__form {
+
+        .form__label {
+            @include sr-only();
+        }
+
+        .form__textarea, .form__input {
+            @include input();
+        }
+
+        .form__submit {
+            @include secondary-button();
+            margin: 30px 0;
+        }
+    }
+}

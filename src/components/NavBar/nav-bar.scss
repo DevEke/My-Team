@@ -12,8 +12,7 @@
         }
         .nav-bar__link {
             margin-right: 40px;
-            color: white;
-            font-weight: 600;
+            @include links();
         }
     }
     .nav-bar__contact-button {

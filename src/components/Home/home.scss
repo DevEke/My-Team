@@ -1,0 +1,136 @@
+@import '../../library.scss';
+
+.home-page__introduction {
+    padding: 20px 165px 200px;
+    @include grid-50();
+    align-items: flex-start;
+    background-image: url('../../img/bg-pattern-home-2.svg'), url('../../img/bg-pattern-home-1.svg');
+    background-repeat: no-repeat, no-repeat;
+    background-position: 85% 100%, -100px 20px;
+
+    .introduction__title {
+        @include h1-large();
+        color: white;
+
+        span {
+            color: $light-coral;
+        }
+    }
+
+    .introduction__text {
+        @include body-large();
+        color: white;
+        padding-left: 20%;
+        align-self: flex-end;
+    }
+}
+
+.home-page__information {
+    background: $sacramento-state-green;
+    padding: 100px 165px;
+    @include grid-50();
+    align-items: flex-start;
+    background-image: url('../../img/bg-pattern-home-3.svg');
+    background-repeat: no-repeat;
+    background-position: 108% 100%;
+
+    .information__title {
+        @include h2();
+        color: white;
+        padding-right: 20%;
+    }
+
+    .information__data {
+        .data-set {
+            margin: 30px auto;
+
+            .data-set__img {
+                float: left;
+                margin-right: 30px;
+            }
+
+            .data-set__title {
+                @include body-large();
+                color: $light-coral;
+                margin-bottom: 10px;
+            }
+            .data-set__text {
+                @include body-small();
+                color: white;
+                opacity: .8;
+            }
+        }
+    }
+}
+
+.home-page__testimonials {
+    padding: 100px 165px;
+    background: $deep-jungle-green;
+    background-image: url('../../img/bg-pattern-home-4-about-3.svg'), url('../../img/bg-pattern-home-5.svg');
+    background-repeat: no-repeat, no-repeat;
+    background-position: 0% 0%, 100% 100%;
+
+    .testimonials__title {
+        @include h2();
+        color: white;
+        text-align: center;
+        margin: 30px 90px;
+
+        span {
+            color: $rapture-blue;
+        }
+    }
+
+    .testimonials__data {
+        @include grid-33();
+        margin-bottom: 20px;
+
+        .testimonial-data {
+            text-align: center;
+            padding-top: 80px;
+            color: white;
+            background-image: url('../../img/icon-quotes.svg');
+            background-repeat: no-repeat;
+            background-position: 50% 40px;
+
+            .testimonial-data__quote {
+                @include body-small();
+            }
+            .testimonial-data__name {
+                @include body-large();
+                color: $rapture-blue;
+                margin-top: 20px;
+            }
+            .testimonial-data__occupation {
+                font-style: italic;
+                font-size: 13px;
+                font-weight: 300;
+            }
+            .testimonial-data__avatar {
+                height: 60px;
+                width: 60px;
+                border: 2px solid $rapture-blue;
+                border-radius: 50%;
+                margin-top: 30px;
+            }
+        }
+    }
+}
+
+.home-page__contact-us {
+    padding: 80px 275px;
+    background: $light-coral;
+    @include flex-spread();
+    background-image: url('../../img/bg-pattern-home-6-about-5.svg');
+    background-repeat: no-repeat;
+    background-position: 0% 100%;
+
+    .contact__title {
+        @include h2();
+        color: $sacramento-state-green;
+    }
+
+    .contact__button {
+        @include primary-button-light();
+    }
+}

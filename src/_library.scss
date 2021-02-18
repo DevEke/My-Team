@@ -10,6 +10,16 @@ $deep-jungle-green: #004047;
 $sacramento-state-green: #012F34;
 $dark-green: #002529;
 
+.blue {
+    background: $rapture-blue;
+    margin-bottom: 100px;
+}
+
+.coral {
+    background: $light-coral;
+    margin-bottom: 50px;
+}
+
 // ===============
 // FONTS
 // ===============
@@ -21,10 +31,12 @@ $font: 'Livvic', sans-serif;
 }
 
 h1, h2, h3 {
-    font-weight: 700;
+    margin: 0;
 }
+
 p {
     font-weight: 600;
+    margin: 0;
 }
 
 @mixin h1-large {
@@ -34,13 +46,25 @@ p {
 @mixin h1-small {
     font-size: 64px;
 }
+@mixin h2 {
+    font-size: 48px;
+    line-height: 48px;
+}
+
+@mixin h3 {
+    font-size: 18px;
+}
 
 @mixin body-large {
     font-size: 18px;
+    line-height: 28px;
+    font-weight: 600;
 }
 
 @mixin body-small {
     font-size: 15px;
+    font-weight: 600;
+    line-height: 25px;
 }
 
 // ===============
@@ -51,7 +75,7 @@ p {
     box-sizing: border-box;
     font-family: $font;
     @include body-large();
-    padding: 15px 35px;
+    padding: 10px 35px;
     border-radius: 40px;
     cursor: pointer;
     transition: background .3s, color .3s;
@@ -73,11 +97,11 @@ p {
 
 @mixin primary-button-light {
     @include buttons();
-    border: 2px solid $midnight-green;
-    color: $midnight-green;
+    border: 2px solid $sacramento-state-green;
+    color: $sacramento-state-green;
     background: transparent;
     &:hover {
-        background: $midnight-green;
+        background: $sacramento-state-green;
         color: white;
     }
     &:disabled {
@@ -88,6 +112,7 @@ p {
 @mixin secondary-button {
     @include buttons();
     background: white;
+    border: none;
     color: $midnight-green;
     &:hover {
         background: $rapture-blue;
@@ -97,25 +122,44 @@ p {
     }
 }
 
+
+// ===============
+// links
+// ===============
+
+@mixin links {
+    font-weight: 600;
+    text-decoration: none;
+    transition: color .3s;
+    color: white;
+    transition: color .3s;
+    &:hover {
+        color: $light-coral;
+    }
+}
+
+
 // ===============
 // FORM ELEMENTS
 // ===============
 
-@mixin text-area {
+@mixin input {
     border: none;
+    background: transparent;
     border-bottom: 1px solid white;
-    padding: 5px 16px;
-    &:active {
+    @include body-small();
+    padding: 20px;
+    margin-bottom: 5px;
+    color: white;
+    width: 85%;
+    cursor: pointer;
+    transition: border-bottom 0.3s;
+    &:hover, &:active {
         border-bottom: 1px solid $rapture-blue;
     }
-}
-
-@mixin text-input {
-    border: none;
-    border-bottom: 1px solid white;
-    padding: 16px;
-    &:hover {
-        border-bottom: 1px solid $rapture-blue;
+    &::placeholder {
+        color: white;
+        opacity: .6;
     }
 }
 
@@ -124,11 +168,57 @@ p {
 // ===============
 
 body {
-    background: $deep-jungle-green;
+    background: $midnight-green;
 }
 
 @mixin flex-spread {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+@mixin grid-50 {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 30px;
+}
+@mixin grid-33 {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 30px;
+}
+
+@mixin grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+}
+
+@mixin grid-2-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 60px;
+    grid-row-gap: 60px;
+}
+
+// ===============
+// DESIGN
+// ===============
+
+.line {
+    height: 4px;
+    width: 50px;
+    top: 0;
+}
+
+@mixin sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
 }
