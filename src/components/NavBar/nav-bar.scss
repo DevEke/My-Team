@@ -8,12 +8,15 @@
         @include flex-spread();
 
         .nav-bar__logo {
-            margin-right: 80px;
+            margin-right: 60px;
         }
         .nav-bar__link {
             margin-right: 40px;
             @include links();
         }
+    }
+    .nav-bar__hamburger-menu {
+        display: none;
     }
     .nav-bar__contact-button {
         @include primary-button-dark();

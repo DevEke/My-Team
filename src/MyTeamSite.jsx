@@ -4,13 +4,17 @@ import HomeView from './components/Home/home';
 import AboutView from './components/About/about';
 import ContactView from './components/Contact/contact';
 import Footer from './components/Footer/footer';
+import MobileMenu from './components/MobileMenu/mobile-menu';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import './_library.scss';
+import './MediaQueries/tablet.scss';
+import './MediaQueries/mobile.scss';
 
 class MyTeamSite extends Component {
   render() {
     return (
       <Router>
+        <MobileMenu/>
         <NavBar />
         <Route exact path="/" render={() => <HomeView />} />
         <Route path="/about" render={() => <AboutView />} />

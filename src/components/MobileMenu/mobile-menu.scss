@@ -1,0 +1,43 @@
+@import '../../library.scss';
+
+.mobile-menu__overlay-container {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    display: none;
+    z-index: 99;
+    background-color: rgba(0,0,0,.5);
+
+    .mobile-menu__modal {
+        margin-left: 80px;
+        box-sizing: border-box;
+        height: 100vh;
+        background-color: $police-blue;
+        padding: 40px 20px;
+        background-image: url('../../img/bg-pattern-about-1-mobile-nav-1.svg');
+        background-repeat: no-repeat;
+        background-position: calc(100% + 100px) 100%;
+        
+        .mobile-menu__close-button {
+            float: right;
+        }
+        .mobile-menu__link {
+            &:first-of-type {
+                margin-top: 60px;
+            }
+            display: block;
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            font-size: 18px;
+            margin-left: 40px;
+            margin-bottom: 20px;
+        }
+
+        .mobile-menu__button {
+            margin-left: 40px;
+            @include primary-button-dark;
+            margin-top: 20px;
+        }
+    }
+}

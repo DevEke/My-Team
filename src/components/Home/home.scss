@@ -6,7 +6,7 @@
     align-items: flex-start;
     background-image: url('../../img/bg-pattern-home-2.svg'), url('../../img/bg-pattern-home-1.svg');
     background-repeat: no-repeat, no-repeat;
-    background-position: 85% 100%, -100px 20px;
+    background-position: calc(100% - 165px) 100%, -100px 20px;
 
     .introduction__title {
         @include h1-large();
@@ -32,7 +32,7 @@
     align-items: flex-start;
     background-image: url('../../img/bg-pattern-home-3.svg');
     background-repeat: no-repeat;
-    background-position: 108% 100%;
+    background-position: calc(100% + 100px) 100%;
 
     .information__title {
         @include h2();

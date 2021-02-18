@@ -146,6 +146,7 @@ p {
 @mixin input {
     border: none;
     background: transparent;
+    box-sizing: border-box;
     border-bottom: 1px solid white;
     @include body-small();
     padding: 20px;
@@ -202,6 +203,11 @@ body {
     grid-row-gap: 60px;
 }
 
+@mixin flex-center-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 // ===============
 // DESIGN
 // ===============
