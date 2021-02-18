@@ -10,12 +10,22 @@ import './_library.scss';
 import './MediaQueries/tablet.scss';
 import './MediaQueries/mobile.scss';
 
+
 class MyTeamSite extends Component {
+
+  closeModal = () => {
+    document.querySelector('.mobile-menu__overlay-container').style.display = "none";
+  }
+
+  openModal = () => {
+    document.querySelector('.mobile-menu__overlay-container').style.display = "block";
+  }
+
   render() {
     return (
       <Router>
-        <MobileMenu/>
-        <NavBar />
+        <MobileMenu closeModal={this.closeModal}/>
+        <NavBar openModal={this.openModal} />
         <Route exact path="/" render={() => <HomeView />} />
         <Route path="/about" render={() => <AboutView />} />
         <Route path="/contact" render={() => <ContactView />} />

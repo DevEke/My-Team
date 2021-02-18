@@ -43,6 +43,21 @@
 
         .form__textarea, .form__input {
             @include input();
+            position: relative;
+        }
+        .form__error-message {
+            display: block;
+            font-weight: 700;
+            font-style: italic;
+            color: $light-coral;
+            padding-left: 20px;
+        }
+
+        .error {
+            border-bottom: 1px solid $light-coral;
+            &::placeholder {
+                color: $light-coral;
+            }
         }
 
         .form__submit {
