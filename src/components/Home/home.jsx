@@ -13,11 +13,11 @@ class HomeView extends Component {
         return (
             <div className="home-page__container">
                 <section className="home-page__introduction">
-                    <h1 className="introduction__title">
+                    <h1 className="home-introduction__title">
                         Find the best <span>talent</span>
                     </h1>
-                    <p className="introduction__text">
-                        <div className="line blue"></div>
+                    <p className="home-introduction__text">
+                        <div className="line blue"/>
                         Finding the right people and building high 
                         performing teams can be hard. Most companies 
                         aren’t tapping into the abundance of global talent. 

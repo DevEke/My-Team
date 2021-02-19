@@ -48,8 +48,8 @@ class AboutView extends Component {
         return (
             <div className="about-page__container">
                 <section className="about-page__introduction">
-                    <h1 className="introduction__title">About</h1>
-                    <p className="introduction__text">
+                    <h1 className="about-introduction__title">About</h1>
+                    <p className="about-introduction__text">
                         <div className="line coral"></div>
                         We help companies build dynamic teams made up of top global talent. 
                         Using our network of passionate professionals we drive innovation 
@@ -71,8 +71,7 @@ class AboutView extends Component {
                                     <div className="directors__item-2">
                                         <p className="directors__name">Nikita Marks</p>
                                         <p className="directors__quote">
-                                            "Distributed teams required unique processes. 
-                                            You need to approach work in a new way."
+                                        “It always amazes me how much talent there is in every corner of the globe.”
                                         </p>
                                         <div className="directors__social-icons">
                                             <img className="directors__social-icon" src={twitter} alt="twitter" />
@@ -94,8 +93,7 @@ class AboutView extends Component {
                                     <div className="directors__item-2">
                                         <p className="directors__name">Cristian Duncan</p>
                                         <p className="directors__quote">
-                                            “Technology is at the forefront of enabling distributed teams. 
-                                            That's where we come in.”
+                                        “Distributed teams required unique processes. You need to approach work in a new way.”
                                         </p>
                                         <div className="directors__social-icons">
                                             <img className="directors__social-icon" src={twitter} alt="twitter" />
@@ -117,7 +115,7 @@ class AboutView extends Component {
                                     <div className="directors__item-2">
                                         <p className="directors__name">Cruz Hamer</p>
                                         <p className="directors__quote">
-                                            “Hiring similar people from similar backgrounds is a surefire way to stunt innovation.”
+                                        “Technology is at the forefront of enabling distributed teams. That's where we come in.” 
                                         </p>
                                         <div className="directors__social-icons">
                                             <img className="directors__social-icon" src={twitter} alt="twitter" />
@@ -139,7 +137,7 @@ class AboutView extends Component {
                                     <div className="directors__item-2">
                                         <p className="directors__name">Drake Heaton</p>
                                         <p className="directors__quote">
-                                            “Unique perspectives shape unique products, which is what you need to survive these days.”
+                                        “Hiring similar people from similar backgrounds is a surefire way to stunt innovation.”
                                         </p>
                                         <div className="directors__social-icons">
                                             <img className="directors__social-icon" src={twitter} alt="twitter" />
@@ -161,7 +159,7 @@ class AboutView extends Component {
                                     <div className="directors__item-2">
                                         <p className="directors__name">Griffin Wise</p>
                                         <p className="directors__quote">
-                                            “Hiring similar people from similar backgrounds is a surefire way to stunt innovation.”
+                                        “Unique perspectives shape unique products, which is what you need to survive these days.” 
                                         </p>
                                         <div className="directors__social-icons">
                                             <img className="directors__social-icon" src={twitter} alt="twitter" />
@@ -176,7 +174,7 @@ class AboutView extends Component {
                             <div className="directors__item-container">
                                 <div id="aden" className="directors__item-clipper">
                                     <div className="directors__item-1">
-                                        <img className="directors__avatar" src={cruz} alt="avatar"/>
+                                        <img className="directors__avatar" src={aden} alt="avatar"/>
                                         <p className="directors__name">Aden Allen</p>
                                         <p className="directors__job">Head of Talent</p>
                                     </div>
@@ -200,11 +198,11 @@ class AboutView extends Component {
                 <section className="about-page__clients">
                     <h2 className="clients__title">Some of our clients</h2>
                     <div className="clients__logos">
-                        <img className="clients__logo" src={verge} alt="verge logo" />
-                        <img className="clients__logo" src={jakarta} alt="jakarta logo" />
-                        <img className="clients__logo" src={guardian} alt="guardian logo" />
-                        <img className="clients__logo" src={techradar} alt="tech radar logo" />
-                        <img className="clients__logo" src={gadgets} alt="gadgets now logo" />
+                        <img id="verge" className="clients__logo" src={verge} alt="verge logo" />
+                        <img id="jakarta" className="clients__logo" src={jakarta} alt="jakarta logo" />
+                        <img id="guardian" className="clients__logo" src={guardian} alt="guardian logo" />
+                        <img id="tech" className="clients__logo" src={techradar} alt="tech radar logo" />
+                        <img id="gadgets" className="clients__logo" src={gadgets} alt="gadgets now logo" />
                     </div>
                 </section>
                 <section className="about-page__contact-us">

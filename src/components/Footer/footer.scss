@@ -2,36 +2,46 @@
 
 .footer__container {
     background: $dark-green;
-    padding: 40px 165px;
-    @include flex-spread();
+    padding: 45px 165px 50px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-column-gap: 30px;
+    grid-row-gap: 50px;
     
+    .footer-contact__info {
+        display: flex;
+        
+    }
     .footer__links-logo {
+        margin-right: 125px;
+
+        .footer__logo {
+            margin-bottom: 25px;
+        }
         .footer__links {
-            margin-top: 30px;
 
             .footer__link {
                 margin-right: 40px;
-                @include links();
-
-                &:visited {
-                    color: $rapture-blue;
-                }
+                @include links;
+                @include body-large;
+                color: white;
             }
         }
     }
 
     .footer__address {
-        padding-right: 200px;
         @include body-small();
         color: white;
         opacity: .6;
-        font-weight: 300;
     }
 
     .footer__copyright-social {
         text-align: right;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         .footer__social-icon {
-            margin-left: 20px;
+            margin-left: 16px;
             cursor: pointer;
             transition: filter 0.3s;
             &:hover,
@@ -50,8 +60,6 @@
             @include body-small();
             color: white;
             opacity: .6;
-            font-weight: 300;
-            margin-top: 30px;
         }
     }
 }

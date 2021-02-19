@@ -1,14 +1,14 @@
 @import '../../library.scss';
 
 .nav-bar__container {
-    padding: 80px 165px;
+    padding: 70px 165px 80px;
     @include flex-spread();
 
     .nav-bar__links {
         @include flex-spread();
 
         .nav-bar__logo {
-            margin-right: 60px;
+            margin-right: 80px;
         }
         .nav-bar__link {
             margin-right: 40px;

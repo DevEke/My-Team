@@ -12,12 +12,12 @@ $dark-green: #002529;
 
 .blue {
     background: $rapture-blue;
-    margin-bottom: 100px;
+    margin-bottom: 90px;
 }
 
 .coral {
     background: $light-coral;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
 }
 
 // ===============
@@ -28,6 +28,7 @@ $font: 'Livvic', sans-serif;
 
 * {
     font-family: $font;
+    box-sizing: border-box;
 }
 
 h1, h2, h3 {
@@ -41,18 +42,24 @@ p {
 
 @mixin h1-large {
     font-size: 100px;
+    line-height: 100px;
 }
 
 @mixin h1-small {
     font-size: 64px;
+    line-height: 56px;
+    font-weight: 700;
 }
 @mixin h2 {
     font-size: 48px;
     line-height: 48px;
+    font-weight: 700;
 }
 
 @mixin h3 {
     font-size: 18px;
+    line-height: 28px;
+    font-weight: 700;
 }
 
 @mixin body-large {
@@ -75,8 +82,9 @@ p {
     box-sizing: border-box;
     font-family: $font;
     @include body-large();
-    padding: 10px 35px;
-    border-radius: 40px;
+    height: 48px;
+    width: 153px;
+    border-radius: 32px;
     cursor: pointer;
     transition: background .3s, color .3s;
 }
@@ -132,9 +140,11 @@ p {
     text-decoration: none;
     transition: color .3s;
     color: white;
-    transition: color .3s;
     &:hover {
         color: $light-coral;
+    }
+    &:visited {
+        color: white;
     }
 }
 
@@ -149,10 +159,9 @@ p {
     box-sizing: border-box;
     border-bottom: 1px solid white;
     @include body-small();
-    padding: 20px;
-    margin-bottom: 5px;
+    padding: 0px 14px 16px;
     color: white;
-    width: 85%;
+    width: 100%;
     cursor: pointer;
     transition: border-bottom 0.3s;
     &:hover, &:active {
@@ -180,8 +189,9 @@ body {
 
 @mixin grid-50 {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 30px;
+    box-sizing: border-box;
 }
 @mixin grid-33 {
     display: grid;
@@ -197,10 +207,10 @@ body {
 
 @mixin grid-desktop {
     display: grid;
-    grid-template-columns: repeat(3, 350px);
-    grid-template-rows: repeat(2, 250px);
-    grid-column-gap: 50px;
-    grid-row-gap: 50px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 48px;
 }
 
 @mixin flex-center-column {

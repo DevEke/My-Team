@@ -14,11 +14,11 @@ import './MediaQueries/mobile.scss';
 class MyTeamSite extends Component {
 
   closeModal = () => {
-    document.querySelector('.mobile-menu__overlay-container').classList.remove('shown');
+    document.querySelector('.mobile-menu__overlay-container').style.display = 'none';
   }
 
   openModal = () => {
-    document.querySelector('.mobile-menu__overlay-container').classList.add('shown');
+    document.querySelector('.mobile-menu__overlay-container').style.display = 'block';
   }
 
   render() {

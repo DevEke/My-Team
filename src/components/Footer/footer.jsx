@@ -11,19 +11,21 @@ class Footer extends Component {
     render() {
         return (
             <div className="footer__container">
-                <div className="footer__links-logo">
-                    <img className="footer__logo" src={logo} alt="logo"/>
-                    <div className="footer__links">
-                        <Link className="footer__link" to="/"><a>home</a></Link>
-                        <Link className="footer__link" to="/about"><a>about</a></Link>
+                <div className="footer-contact__info">
+                    <div className="footer__links-logo">
+                        <img className="footer__logo" src={logo} alt="logo"/>
+                        <div className="footer__links">
+                            <Link className="footer__link" to="/"><a>home</a></Link>
+                            <Link className="footer__link" to="/about"><a>about</a></Link>
+                        </div>
                     </div>
+                    <p className="footer__address">
+                        987 Hillcrest Lane<br/>
+                        Irvine, CA<br/>
+                        California 92714<br/>
+                        Call Us: 949-833-7432
+                    </p>
                 </div>
-                <p className="footer__address">
-                    987 Hillcrest Lane<br/>
-                    Irvine, CA<br/>
-                    California 92714<br/>
-                    Call Us: 949-833-7432
-                </p>
                 <div className="footer__copyright-social">
                     <div className="footer__social-icons">
                         <img className="footer__social-icon" src={facebook} alt="facebook icon"/>

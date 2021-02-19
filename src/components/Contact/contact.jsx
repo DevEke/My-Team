@@ -28,14 +28,9 @@ function ContactView(props) {
             nameValidation.noName = "This field is required";
             isValid = false;
         }
-        if ( !email.includes(".") && !email.includes("@") ) {
+        if ( (!email.includes(".") && !email.includes("@")) || email.length < 0 ) {
             document.getElementById('email').classList.add('error');
             emailValidation.emailInvalid = "Enter a valid email address";
-            isValid = false;
-        }
-        if ( email.length <= 0 ) {
-            document.getElementById('email').classList.add('error');
-            emailValidation.noEmail = "This field is required";
             isValid = false;
         }
         if ( company.length <= 0 ) {
@@ -94,41 +89,51 @@ function ContactView(props) {
                     </div>
                 </div>
                 <form className="contact-page__form">
-                    <label className="form__label" htmlFor="name">Name</label>
-                    <input className="form__input" type="text" placeholder="Name" id="name" />
-                    {Object.keys(nameValidation).map((key) => {
-                        return (
-                            <small className="form__error-message">{nameValidation[key]}</small>
-                        )
-                    })}
-                    <label className="form__label" htmlFor="email">Email Address</label>
-                    <input className="form__input" type="text" placeholder="Email Address" id="email" />
-                    {Object.keys(emailValidation).map((key) => {
-                        return (
-                            <small className="form__error-message">{emailValidation[key]}</small>
-                        )
-                    })}
-                    <label className="form__label" htmlFor="company">Company Name</label>
-                    <input className="form__input" type="text" placeholder="Company Name" id="company" />
-                    {Object.keys(companyValidation).map((key) => {
-                        return (
-                            <small className="form__error-message">{companyValidation[key]}</small>
-                        )
-                    })}
-                    <label className="form__label" htmlFor="title">Title</label>
-                    <input className="form__input" type="text" placeholder="Title" id="title" />
-                    {Object.keys(titleValidation).map((key) => {
-                        return (
-                            <small className="form__error-message">{titleValidation[key]}</small>
-                        )
-                    })}
-                    <label className="form__label" htmlFor="title">Message</label>
-                    <textarea className="form__textarea" type="text" placeholder="Message" id="message" />
-                    {Object.keys(messageValidation).map((key) => {
-                        return (
-                            <small className="form__error-message">{messageValidation[key]}</small>
-                        )
-                    })}
+                    <div className="form__input-container">
+                        <label className="form__label" htmlFor="name">Name</label>
+                        <input className="form__input" type="text" placeholder="Name" id="name" />
+                        {Object.keys(nameValidation).map((key) => {
+                            return (
+                                <small className="form__error-message">{nameValidation[key]}</small>
+                            )
+                        })}
+                    </div>
+                    <div className="form__input-container">
+                        <label className="form__label" htmlFor="email">Email Address</label>
+                        <input className="form__input" type="text" placeholder="Email Address" id="email" />
+                        {Object.keys(emailValidation).map((key) => {
+                            return (
+                                <small className="form__error-message">{emailValidation[key]}</small>
+                            )
+                        })}
+                    </div>
+                    <div className="form__input-container">
+                        <label className="form__label" htmlFor="company">Company Name</label>
+                        <input className="form__input" type="text" placeholder="Company Name" id="company" />
+                        {Object.keys(companyValidation).map((key) => {
+                            return (
+                                <small className="form__error-message">{companyValidation[key]}</small>
+                            )
+                        })}
+                    </div>
+                    <div className="form__input-container">
+                        <label className="form__label" htmlFor="title">Title</label>
+                        <input className="form__input" type="text" placeholder="Title" id="title" />
+                        {Object.keys(titleValidation).map((key) => {
+                            return (
+                                <small className="form__error-message">{titleValidation[key]}</small>
+                            )
+                        })} 
+                    </div>
+                    <div className="form__input-container">
+                        <label className="form__label" htmlFor="title">Message</label>
+                        <textarea className="form__textarea" type="text" placeholder="Message" id="message" />
+                        {Object.keys(messageValidation).map((key) => {
+                            return (
+                                <small className="form__error-message">{messageValidation[key]}</small>
+                            )
+                        })}
+                    </div>
                     <button onClick={submitForm} className="form__submit">submit</button>
                 </form>
             </div>

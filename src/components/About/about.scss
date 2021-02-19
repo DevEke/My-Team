@@ -2,26 +2,33 @@
 
 .about-page__introduction {
     padding: 40px 165px 120px;
-    @include grid-3();
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-column-gap: 30px;
     background-image: url('../../img/bg-pattern-about-1-mobile-nav-1.svg');
     background-repeat: no-repeat;
     background-position: calc(100% + 100px) 100%;
 
-    .introduction__title {
+    .about-introduction__title {
         @include h1-small();
+        line-height: 100px;
         color: white;
         grid-area: 1/1/2/2;
     }
 
-    .introduction__text {
+    .about-introduction__text {
         grid-area: 1/2/2/4;
         color: white;
         @include body-large();
+
+        .coral {
+            margin-bottom: 40px;
+        }
     }
 }
 
 .about-page__directors {
-    padding: 120px 165px;
+    padding: 140px 165px;
     background: $deep-jungle-green;
     display: flex;
     flex-direction: column;
@@ -34,10 +41,11 @@
     .directors__title {
         @include h2();
         color: white;
+        margin-bottom: 64px;
     }
     .directors__grid {
         @include grid-desktop;
-        margin: 60px auto;
+        margin-bottom: 28px;
 
         .directors__grid-item {
             position: relative;
@@ -62,9 +70,8 @@
                     box-sizing: border-box;
                     flex-shrink: 0;
                     flex-direction: column;
-                    justify-content: center;
                     align-items: center;
-                    padding: 10px 40px 40px;
+                    padding: 30px 40px 56px;
                 }
 
                 .directors__item-1 {
@@ -79,34 +86,35 @@
                 .directors__avatar {
                     box-sizing: border-box;
                     border: 2px solid $rapture-blue;
-                    height: 96px;
-                    width: 96px;
+                    height: 100px;
+                    width: 100px;
                     border-radius: 50%;
-                    margin-bottom: 5px;
+                    margin-bottom: 16px;
                 }
 
                 .directors__name {
                     @include body-large;
                     color: $rapture-blue;
-                    margin: 5px;
                 }
                 .directors__job {
                     @include body-small;
                     color: white;
+                    font-weight: 500;
                     font-style: italic;
                 }
 
                 .directors__quote {
                     color: white;
                     @include body-small;
+                    margin-top: 8px;
                 }
 
                 .directors__social-icons {
-                    margin-top: 30px;
+                    margin-top: 24px;
                 }
 
                 .directors__social-icon {
-                    margin: 0 10px;
+                    margin: 0 8px;
                     transition: filter 0.3s;
                     cursor: pointer;
                     &:hover,
@@ -158,7 +166,7 @@
 
 .about-page__clients {
     background: $sacramento-state-green;
-    padding: 150px 165px;
+    padding: 140px 165px;
     text-align: center;
     background-image: url('../../img/bg-pattern-about-4.svg');
     background-repeat: no-repeat;
@@ -167,24 +175,31 @@
     .clients__title {
         @include h2();
         color: white;
+        margin-bottom: 64px;
     }
     .clients__logos {
-        margin-top: 60px;
         @include flex-spread();
 
         .clients__logo {
-            height: 25px;
             width: auto;
-            &:last-of-type {
-                height: 40px;
-            }
+        }
+        #jakarta {
+            height: 23px;
+        }
+        #tech,
+        #guardian,
+        #verge {
+            height: 28px;
+        }
+        #gadgets {
+            height: 45px;
         }
     }
 }
 
 
 .about-page__contact-us {
-    padding: 80px 275px;
+    padding: 70px 265px;
     background: $light-coral;
     @include flex-spread();
     background-image: url('../../img/bg-pattern-home-6-about-5.svg');

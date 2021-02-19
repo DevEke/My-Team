@@ -1,14 +1,14 @@
 @import '../../library.scss';
 
 .home-page__introduction {
-    padding: 20px 165px 200px;
+    padding: 50px 165px 250px;
     @include grid-50();
     align-items: flex-start;
     background-image: url('../../img/bg-pattern-home-2.svg'), url('../../img/bg-pattern-home-1.svg');
     background-repeat: no-repeat, no-repeat;
-    background-position: calc(100% - 165px) 100%, -100px 20px;
+    background-position: calc(100% - 165px) 100%, -100px 50px;
 
-    .introduction__title {
+    .home-introduction__title {
         @include h1-large();
         color: white;
 
@@ -17,17 +17,16 @@
         }
     }
 
-    .introduction__text {
+    .home-introduction__text {
         @include body-large();
         color: white;
-        padding-left: 20%;
-        align-self: flex-end;
+        padding-left: 95px;
     }
 }
 
 .home-page__information {
     background: $sacramento-state-green;
-    padding: 100px 165px;
+    padding: 140px 165px;
     @include grid-50();
     align-items: flex-start;
     background-image: url('../../img/bg-pattern-home-3.svg');
@@ -37,22 +36,28 @@
     .information__title {
         @include h2();
         color: white;
-        padding-right: 20%;
+        padding-right: 95px;
     }
 
     .information__data {
+        padding-top: 60px;
         .data-set {
-            margin: 30px auto;
 
+            &:first-of-type {
+                margin-bottom: 32px;
+            }
+            &:last-of-type {
+                margin-top: 32px;
+            }
             .data-set__img {
                 float: left;
-                margin-right: 30px;
+                margin-right: 20px;
             }
 
             .data-set__title {
                 @include body-large();
                 color: $light-coral;
-                margin-bottom: 10px;
+                margin-bottom: 16px;
             }
             .data-set__text {
                 @include body-small();
@@ -64,7 +69,7 @@
 }
 
 .home-page__testimonials {
-    padding: 100px 165px;
+    padding: 140px 165px;
     background: $deep-jungle-green;
     background-image: url('../../img/bg-pattern-home-4-about-3.svg'), url('../../img/bg-pattern-home-5.svg');
     background-repeat: no-repeat, no-repeat;
@@ -74,7 +79,7 @@
         @include h2();
         color: white;
         text-align: center;
-        margin: 30px 90px;
+        margin: 0 90px 56px;
 
         span {
             color: $rapture-blue;
@@ -83,42 +88,42 @@
 
     .testimonials__data {
         @include grid-33();
-        margin-bottom: 20px;
 
         .testimonial-data {
             text-align: center;
-            padding-top: 80px;
+            padding-top: 36px;
             color: white;
             background-image: url('../../img/icon-quotes.svg');
             background-repeat: no-repeat;
-            background-position: 50% 40px;
+            background-position: 50% 0;
 
             .testimonial-data__quote {
                 @include body-small();
+                margin-bottom: 24px;
             }
             .testimonial-data__name {
                 @include body-large();
                 color: $rapture-blue;
-                margin-top: 20px;
             }
             .testimonial-data__occupation {
                 font-style: italic;
                 font-size: 13px;
-                font-weight: 300;
+                font-weight: 500;
+                line-height: 18px;
+                margin-bottom: 32px;
             }
             .testimonial-data__avatar {
-                height: 60px;
-                width: 60px;
+                height: 64px;
+                width: 64px;
                 border: 2px solid $rapture-blue;
                 border-radius: 50%;
-                margin-top: 30px;
             }
         }
     }
 }
 
 .home-page__contact-us {
-    padding: 80px 275px;
+    padding: 70px 265px;
     background: $light-coral;
     @include flex-spread();
     background-image: url('../../img/bg-pattern-home-6-about-5.svg');
