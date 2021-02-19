@@ -195,12 +195,12 @@ body {
     grid-gap: 30px;
 }
 
-@mixin grid-2-3 {
+@mixin grid-desktop {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 60px;
-    grid-row-gap: 60px;
+    grid-template-columns: repeat(3, 350px);
+    grid-template-rows: repeat(2, 250px);
+    grid-column-gap: 50px;
+    grid-row-gap: 50px;
 }
 
 @mixin flex-center-column {

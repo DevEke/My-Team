@@ -32,6 +32,19 @@
         text-align: right;
         .footer__social-icon {
             margin-left: 20px;
+            cursor: pointer;
+            transition: filter 0.3s;
+            &:hover,
+            &:focus {
+                filter: brightness(0) 
+                        saturate(100%)
+                        invert(60%) 
+                        sepia(12%) 
+                        saturate(2053%) 
+                        hue-rotate(313deg) 
+                        brightness(100%) 
+                        contrast(93%);
+            }
         }
         .footer__copyright {
             @include body-small();

@@ -11,10 +11,40 @@ import cruz from '../../img/avatar-cruz.jpg';
 import drake from '../../img/avatar-drake.jpg';
 import griffin from '../../img/avatar-griffin.jpg';
 import aden from '../../img/avatar-aden.jpg';
+import twitter from '../../img/icon-twitter.svg';
+import linkedin from '../../img/icon-linkedin.svg';
 import './about.scss';
 
 class AboutView extends Component {
+
+    toggleNikita = () => {
+        document.getElementById('nikita').classList.toggle('hide');
+        document.getElementById('nikita-button').classList.toggle('on');
+    }
+    toggleCristian = () => {
+        document.getElementById('cristian').classList.toggle('hide');
+        document.getElementById('cristian-button').classList.toggle('on');
+    }
+    toggleCruz = () => {
+        document.getElementById('cruz').classList.toggle('hide');
+        document.getElementById('cruz-button').classList.toggle('on');
+    }
+    toggleDrake = () => {
+        document.getElementById('drake').classList.toggle('hide');
+        document.getElementById('drake-button').classList.toggle('on');
+    }
+    toggleGriffin = () => {
+        document.getElementById('griffin').classList.toggle('hide');
+        document.getElementById('griffin-button').classList.toggle('on');
+    }
+    toggleAden = () => {
+        document.getElementById('aden').classList.toggle('hide');
+        document.getElementById('aden-button').classList.toggle('on');
+    }
+
     render() {
+
+
         return (
             <div className="about-page__container">
                 <section className="about-page__introduction">
@@ -31,40 +61,139 @@ class AboutView extends Component {
                     <h2 className="directors__title">Meet the directors</h2>
                     <div className="directors__grid">
                         <div className="directors__grid-item">
-                            <img className="directors__avatar" src={nikita} alt="nikitas avatar"/>
-                            <p className="directors__name">Nikita Marks</p>
-                            <p className="directors__position">Founder & CEO</p>
-                            <button className="directors__switch"></button>
+                            <div className="directors__item-container">
+                                <div id="nikita" className="directors__item-clipper">
+                                    <div className="directors__item-1">
+                                        <img className="directors__avatar" src={nikita} alt="avatar"/>
+                                        <p className="directors__name">Nikita Marks</p>
+                                        <p className="directors__job">Founder & CEO</p>
+                                    </div>
+                                    <div className="directors__item-2">
+                                        <p className="directors__name">Nikita Marks</p>
+                                        <p className="directors__quote">
+                                            "Distributed teams required unique processes. 
+                                            You need to approach work in a new way."
+                                        </p>
+                                        <div className="directors__social-icons">
+                                            <img className="directors__social-icon" src={twitter} alt="twitter" />
+                                            <img className="directors__social-icon" src={linkedin} alt="linkedin"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button onClick={this.toggleNikita} id="nikita-button" className="directors__button"></button>
                         </div>
                         <div className="directors__grid-item">
-                            <img className="directors__avatar" src={cristian} alt="cristians avatar"/>
-                            <p className="directors__name">Cristian Duncan</p>
-                            <p className="directors__position">Co-founder & COO</p>
-                            <button className="directors__switch"></button>
+                            <div className="directors__item-container">
+                                <div id="cristian" className="directors__item-clipper">
+                                    <div className="directors__item-1">
+                                        <img className="directors__avatar" src={cristian} alt="avatar"/>
+                                        <p className="directors__name">Cristian Duncan</p>
+                                        <p className="directors__job">Co-founder & COO</p>
+                                    </div>
+                                    <div className="directors__item-2">
+                                        <p className="directors__name">Cristian Duncan</p>
+                                        <p className="directors__quote">
+                                            “Technology is at the forefront of enabling distributed teams. 
+                                            That's where we come in.”
+                                        </p>
+                                        <div className="directors__social-icons">
+                                            <img className="directors__social-icon" src={twitter} alt="twitter" />
+                                            <img className="directors__social-icon" src={linkedin} alt="linkedin"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button onClick={this.toggleCristian} id="cristian-button" className="directors__button"></button>
                         </div>
                         <div className="directors__grid-item">
-                            <img className="directors__avatar" src={cruz} alt="cruzs avatar"/>
-                            <p className="directors__name">Cruz Hamer</p>
-                            <p className="directors__position">Co-founder & CTO</p>
-                            <button className="directors__switch"></button>
+                            <div className="directors__item-container">
+                                <div id="cruz" className="directors__item-clipper">
+                                    <div className="directors__item-1">
+                                        <img className="directors__avatar" src={cruz} alt="avatar"/>
+                                        <p className="directors__name">Cruz Hamer</p>
+                                        <p className="directors__job">Co-founder & CTO</p>
+                                    </div>
+                                    <div className="directors__item-2">
+                                        <p className="directors__name">Cruz Hamer</p>
+                                        <p className="directors__quote">
+                                            “Hiring similar people from similar backgrounds is a surefire way to stunt innovation.”
+                                        </p>
+                                        <div className="directors__social-icons">
+                                            <img className="directors__social-icon" src={twitter} alt="twitter" />
+                                            <img className="directors__social-icon" src={linkedin} alt="linkedin"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button onClick={this.toggleCruz} id="cruz-button" className="directors__button"></button>
                         </div>
                         <div className="directors__grid-item">
-                            <img className="directors__avatar" src={drake} alt="drakes avatar"/>
-                            <p className="directors__name">Drake Heaton</p>
-                            <p className="directors__position">Business Development Lead</p>
-                            <button className="directors__switch"></button>
+                            <div className="directors__item-container">
+                                <div id="drake" className="directors__item-clipper">
+                                    <div className="directors__item-1">
+                                        <img className="directors__avatar" src={drake} alt="avatar"/>
+                                        <p className="directors__name">Drake Heaton</p>
+                                        <p className="directors__job">Business Development Lead</p>
+                                    </div>
+                                    <div className="directors__item-2">
+                                        <p className="directors__name">Drake Heaton</p>
+                                        <p className="directors__quote">
+                                            “Unique perspectives shape unique products, which is what you need to survive these days.”
+                                        </p>
+                                        <div className="directors__social-icons">
+                                            <img className="directors__social-icon" src={twitter} alt="twitter" />
+                                            <img className="directors__social-icon" src={linkedin} alt="linkedin"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button onClick={this.toggleDrake} id="drake-button" className="directors__button"></button>
                         </div>
                         <div className="directors__grid-item">
-                            <img className="directors__avatar" src={griffin} alt="griffins avatar"/>
-                            <p className="directors__name">Griffin Wise</p>
-                            <p className="directors__position">Lead Marketing</p>
-                            <button className="directors__switch"></button>
+                            <div className="directors__item-container">
+                                <div id="griffin" className="directors__item-clipper">
+                                    <div className="directors__item-1">
+                                        <img className="directors__avatar" src={griffin} alt="avatar"/>
+                                        <p className="directors__name">Griffin Wise</p>
+                                        <p className="directors__job">Lead Marketing</p>
+                                    </div>
+                                    <div className="directors__item-2">
+                                        <p className="directors__name">Griffin Wise</p>
+                                        <p className="directors__quote">
+                                            “Hiring similar people from similar backgrounds is a surefire way to stunt innovation.”
+                                        </p>
+                                        <div className="directors__social-icons">
+                                            <img className="directors__social-icon" src={twitter} alt="twitter" />
+                                            <img className="directors__social-icon" src={linkedin} alt="linkedin"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button onClick={this.toggleGriffin} id="griffin-button" className="directors__button"></button>
                         </div>
                         <div className="directors__grid-item">
-                            <img className="directors__avatar" src={aden} alt="nikitas avatar"/>
-                            <p className="directors__name">Aden Allen</p>
-                            <p className="directors__position">Head of Talent</p>
-                            <button className="directors__switch"></button>
+                            <div className="directors__item-container">
+                                <div id="aden" className="directors__item-clipper">
+                                    <div className="directors__item-1">
+                                        <img className="directors__avatar" src={cruz} alt="avatar"/>
+                                        <p className="directors__name">Aden Allen</p>
+                                        <p className="directors__job">Head of Talent</p>
+                                    </div>
+                                    <div className="directors__item-2">
+                                        <p className="directors__name">Aden Allen</p>
+                                        <p className="directors__quote">
+                                            “Empowered teams create truly amazing products. 
+                                            Set the north star and let them follow it.”
+                                        </p>
+                                        <div className="directors__social-icons">
+                                            <img className="directors__social-icon" src={twitter} alt="twitter" />
+                                            <img className="directors__social-icon" src={linkedin} alt="linkedin"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button onClick={this.toggleAden} id="aden-button" className="directors__button"></button>
                         </div>
                     </div>
                 </section>

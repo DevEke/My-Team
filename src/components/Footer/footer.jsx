@@ -8,14 +8,6 @@ import twitter from '../../img/icon-twitter.svg';
 
 class Footer extends Component {
 
-    changeHover = () => {
-
-    }
-
-    revertHover = () => {
-
-    }
-    
     render() {
         return (
             <div className="footer__container">

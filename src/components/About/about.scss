@@ -23,6 +23,9 @@
 .about-page__directors {
     padding: 120px 165px;
     background: $deep-jungle-green;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-align: center;
     background-image: url('../../img/bg-pattern-about-2-contact-1.svg'), url('../../img/bg-pattern-home-4-about-3.svg');
     background-repeat: no-repeat, no-repeat;
@@ -33,57 +36,124 @@
         color: white;
     }
     .directors__grid {
-        @include grid-2-3();
-        margin: 50px 0;
+        @include grid-desktop;
+        margin: 60px auto;
 
         .directors__grid-item {
-            padding: 30px 0 50px;
-            background: $sacramento-state-green;
             position: relative;
 
-            .directors__avatar {
-                height: 90px;
-                width: 90px;
-                border-radius: 50%;
-                border: 2px solid $rapture-blue;
+            .directors__item-container {
+                height: 250px;
+                width: 350px;
+                overflow: hidden;
+
+                .directors__item-clipper {
+                    display: flex;
+                    height: 250px;
+                    width: 700px;
+                    transition: transform 0.3s;
+                }
+
+                .directors__item-1,
+                .directors__item-2 {
+                    height: 250px;
+                    width: 350px;
+                    display: flex;
+                    box-sizing: border-box;
+                    flex-shrink: 0;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 10px 40px 40px;
+                }
+
+                .directors__item-1 {
+                    background-color: $sacramento-state-green;
+                }
+                .directors__item-2 {
+                    background: $dark-green;
+
+                    
+                }
+
+                .directors__avatar {
+                    box-sizing: border-box;
+                    border: 2px solid $rapture-blue;
+                    height: 96px;
+                    width: 96px;
+                    border-radius: 50%;
+                    margin-bottom: 5px;
+                }
+
+                .directors__name {
+                    @include body-large;
+                    color: $rapture-blue;
+                    margin: 5px;
+                }
+                .directors__job {
+                    @include body-small;
+                    color: white;
+                    font-style: italic;
+                }
+
+                .directors__quote {
+                    color: white;
+                    @include body-small;
+                }
+
+                .directors__social-icons {
+                    margin-top: 30px;
+                }
+
+                .directors__social-icon {
+                    margin: 0 10px;
+                    transition: filter 0.3s;
+                    cursor: pointer;
+                    &:hover,
+                    &:focus {
+                        filter: brightness(0) 
+                                saturate(100%)
+                                invert(60%) 
+                                sepia(12%) 
+                                saturate(2053%) 
+                                hue-rotate(313deg) 
+                                brightness(100%) 
+                                contrast(93%);
+                    }
+                }
+                
             }
 
-            .directors__name {
-                @include body-large();
-                color: $rapture-blue;
-                margin-top: 15px;
-            }
-            .directors__position {
-                @include body-small();
-                font-weight: 300;
-                font-style: italic;
-                color: white;
-            }
-
-            .directors__switch {
+            .directors__button {
                 position: absolute;
+                margin: 0 auto;
+                left: 0;
+                right: 0;
+                bottom: -28px;
                 height: 56px;
                 width: 56px;
-                background-color: $light-coral;
-                border: none;
                 border-radius: 50%;
+                border: none;
                 cursor: pointer;
-                left: 0; 
-                right: 0; 
-                margin-left: auto; 
-                margin-right: auto;
-                bottom: -25px;
+                background-color: $light-coral;
                 background-image: url('../../img/icon-cross.svg');
                 background-position: center;
                 background-repeat: no-repeat;
-                transition: background-color .3s;
+                transition: background-color 0.3s, transform 0.3s;
                 &:hover {
                     background-color: $rapture-blue;
                 }
             }
-
         }
     }
+}
+
+.hide {
+    transform: translateX(-350px);
+}
+.on {
+    background-color: $rapture-blue;
+    transform: rotate(-45deg);
 }
 
 .about-page__clients {
