@@ -28,7 +28,6 @@ $font: 'Livvic', sans-serif;
 
 * {
     font-family: $font;
-    box-sizing: border-box;
 }
 
 h1, h2, h3 {
@@ -130,6 +129,12 @@ p {
     }
 }
 
+button {
+    &:active,
+    &:focus {
+        outline: none;
+    }
+}
 
 // ===============
 // links
@@ -142,9 +147,6 @@ p {
     color: white;
     &:hover {
         color: $light-coral;
-    }
-    &:visited {
-        color: white;
     }
 }
 
@@ -176,6 +178,10 @@ p {
 // ===============
 // GLOBAL
 // ===============
+
+* {
+    box-sizing: border-box;
+}
 
 body {
     background: $midnight-green;

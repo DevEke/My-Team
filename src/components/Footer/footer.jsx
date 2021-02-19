@@ -28,9 +28,9 @@ class Footer extends Component {
                 </div>
                 <div className="footer__copyright-social">
                     <div className="footer__social-icons">
-                        <img className="footer__social-icon" src={facebook} alt="facebook icon"/>
-                        <img className="footer__social-icon" src={pinterest} alt="pinterest icon"/>
-                        <img className="footer__social-icon" src={twitter} alt="twitter icon"/>
+                        <a href="#"><img className="footer__social-icon" src={facebook} alt="facebook icon"/></a>
+                        <a href="#"><img className="footer__social-icon" src={pinterest} alt="pinterest icon"/></a>
+                        <a href="#"><img className="footer__social-icon" src={twitter} alt="twitter icon"/></a>
                     </div>
                     <p className="footer__copyright">Copyright 2020. All Rights Reserved</p>
                 </div>

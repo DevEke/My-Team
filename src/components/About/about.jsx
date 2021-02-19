@@ -74,8 +74,8 @@ class AboutView extends Component {
                                         “It always amazes me how much talent there is in every corner of the globe.”
                                         </p>
                                         <div className="directors__social-icons">
-                                            <img className="directors__social-icon" src={twitter} alt="twitter" />
-                                            <img className="directors__social-icon" src={linkedin} alt="linkedin"/>
+                                            <a href="#"><img className="directors__social-icon" src={twitter} alt="twitter" /></a>
+                                            <a href="#"><img className="directors__social-icon" src={linkedin} alt="linkedin"/></a>
                                         </div>
                                     </div>
                                 </div>
@@ -96,8 +96,8 @@ class AboutView extends Component {
                                         “Distributed teams required unique processes. You need to approach work in a new way.”
                                         </p>
                                         <div className="directors__social-icons">
-                                            <img className="directors__social-icon" src={twitter} alt="twitter" />
-                                            <img className="directors__social-icon" src={linkedin} alt="linkedin"/>
+                                            <a href="#"><img className="directors__social-icon" src={twitter} alt="twitter" /></a>
+                                            <a href="#"><img className="directors__social-icon" src={linkedin} alt="linkedin"/></a>
                                         </div>
                                     </div>
                                 </div>
@@ -118,8 +118,8 @@ class AboutView extends Component {
                                         “Technology is at the forefront of enabling distributed teams. That's where we come in.” 
                                         </p>
                                         <div className="directors__social-icons">
-                                            <img className="directors__social-icon" src={twitter} alt="twitter" />
-                                            <img className="directors__social-icon" src={linkedin} alt="linkedin"/>
+                                            <a href="#"><img className="directors__social-icon" src={twitter} alt="twitter" /></a>
+                                            <a href="#"><img className="directors__social-icon" src={linkedin} alt="linkedin"/></a>
                                         </div>
                                     </div>
                                 </div>
@@ -140,8 +140,8 @@ class AboutView extends Component {
                                         “Hiring similar people from similar backgrounds is a surefire way to stunt innovation.”
                                         </p>
                                         <div className="directors__social-icons">
-                                            <img className="directors__social-icon" src={twitter} alt="twitter" />
-                                            <img className="directors__social-icon" src={linkedin} alt="linkedin"/>
+                                            <a href="#"><img className="directors__social-icon" src={twitter} alt="twitter" /></a>
+                                            <a href="#"><img className="directors__social-icon" src={linkedin} alt="linkedin"/></a>
                                         </div>
                                     </div>
                                 </div>
@@ -162,8 +162,8 @@ class AboutView extends Component {
                                         “Unique perspectives shape unique products, which is what you need to survive these days.” 
                                         </p>
                                         <div className="directors__social-icons">
-                                            <img className="directors__social-icon" src={twitter} alt="twitter" />
-                                            <img className="directors__social-icon" src={linkedin} alt="linkedin"/>
+                                            <a href="#"><img className="directors__social-icon" src={twitter} alt="twitter" /></a>
+                                            <a href="#"><img className="directors__social-icon" src={linkedin} alt="linkedin"/></a>
                                         </div>
                                     </div>
                                 </div>
@@ -185,8 +185,8 @@ class AboutView extends Component {
                                             Set the north star and let them follow it.”
                                         </p>
                                         <div className="directors__social-icons">
-                                            <img className="directors__social-icon" src={twitter} alt="twitter" />
-                                            <img className="directors__social-icon" src={linkedin} alt="linkedin"/>
+                                            <a href="#"><img className="directors__social-icon" src={twitter} alt="twitter" /></a>
+                                            <a href="#"><img className="directors__social-icon" src={linkedin} alt="linkedin"/></a>
                                         </div>
                                     </div>
                                 </div>

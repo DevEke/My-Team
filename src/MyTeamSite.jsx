@@ -24,7 +24,7 @@ class MyTeamSite extends Component {
   render() {
     return (
       <Router>
-        {/* <MobileMenu closeModal={this.closeModal}/> */}
+        <MobileMenu closeModal={this.closeModal}/>
         <NavBar openModal={this.openModal} />
         <Route exact path="/" render={() => <HomeView />} />
         <Route path="/about" render={() => <AboutView />} />
