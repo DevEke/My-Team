@@ -23,6 +23,7 @@ function ContactView(props) {
         let company = document.getElementById('company').value;
         let title = document.getElementById('title').value;
         let message = document.getElementById('message').value;
+        
         if ( name.length <= 0 ) {
             document.getElementById('name').classList.add('error');
             nameValidation.noName = "This field is required";
